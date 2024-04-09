@@ -18,7 +18,7 @@ function Login() {
     //     password: credentials.password,
     //   })
     // )
-    const response = await fetch("http://localhost:5000/api/loginuser", {
+    const response = await fetch("https://foodify-omega.vercel.app/loginuser", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

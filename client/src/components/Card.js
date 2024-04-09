@@ -1,19 +1,12 @@
 import React, { useEffect, useRef, useState } from "react";
-import { useDispatchCart,useCart } from "./ContextReducer";
 
 function Card(props) {
-  let dispatch = useDispatchCart()
-  let data = useCart()
   const priceRef = useRef();
   let options = props.options;
   let priceOptions = Object.keys(options);
 
   const [qty,setQty] = useState(1)
   const [size,setSize] = useState("")
-
-  const handleAddToCart = async () => {
-  await dispatch({type:"ADD", id:props.foodItem._id, name: props.foodItem.name,price: finalPrice, qty:qty, size:size})
-  }
 
   let finalPrice = qty*parseInt(options[size]);
   useEffect(()=>{

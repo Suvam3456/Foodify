@@ -17,7 +17,7 @@ const Signup = () => {
   const handleSubmit = async (e) => {
     e.preventDefault(); // A synthetic event
     // Ye Front end hai jisse post request bhejre
-    const response = await fetch("http://localhost:5000/api/createuser", {
+    const response = await fetch("https://foodify-omega.vercel.app/createuser", {
       // yha upar hit krre hamlog /createuser endpoint ko
       method: "POST",
       headers: {
